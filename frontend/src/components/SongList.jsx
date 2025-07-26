@@ -28,16 +28,20 @@ const SongList = ({ mood }) => {
     const getSongsByMood = async () => {
       try {
         setLoading(true);
-        const res = await api.get(`/songs?mood=${mood}`);
-        if (res.statusText === "OK") {
+        console.log("Mood requested:", mood);
+        const res = await api.get(`/songs?mood=${mood.toLowerCase()}`);
+        if (res.status === 200) {
           setSongs(res.data.data);
-          setLoading(false);
+        } else {
+          console.warn("Unexpected response:", res);
         }
       } catch (err) {
-        console.log(err);
+        console.error("Error fetching songs:", err);
+      } finally {
         setLoading(false);
       }
     };
+
     getSongsByMood();
   }, [mood]);
   return (

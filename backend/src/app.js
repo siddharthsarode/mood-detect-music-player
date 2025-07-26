@@ -15,7 +15,7 @@ app.use(
     origin:
       process.env.NODE_ENV === "development"
         ? ["http://localhost:5173", "http://localhost:3000"]
-        : [],
+        : [process.env.HOST_CLIENT, process.env.HOST_SERVER],
   })
 );
 

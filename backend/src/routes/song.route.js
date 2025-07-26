@@ -41,7 +41,9 @@ router.get("/", async (req, res) => {
     if (!mood)
       return res.status(400).json({ message: "Please provide parameter!" });
 
-    const songs = await SongModel.find({ mood: mood });
+    const songs = await SongModel.find({ mood: mood }).sort({
+      createdAt: -1,
+    });
 
     if (!songs || songs.length <= 0)
       return res.status(204).json({ message: "No content found" });

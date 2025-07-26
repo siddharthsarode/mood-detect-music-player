@@ -1,0 +1,21 @@
+<svg
+    width="64"
+    height="64"
+    viewBox="0 0 64 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <rect width="64" height="64" rx="12" fill="white" />
+    <path
+        d="M40 12V36.5C39.16 36.18 38.13 36 37 36C33.69 36 31 38.01 31 40.5C31 43 33.69 45 37 45C40.31 45 43 43 43 40.5V22H50V12H40Z"
+        fill="blue"
+    />
+    <circle cx="20" cy="44" r="5" fill="blue" />
+    <rect x="18" y="25" width="4" height="20" rx="2" fill="blue" />
+    <path
+        d="M22 25L40 18"
+        stroke="blue"
+        stroke-width="2"
+        stroke-linecap="round"
+    />
+</svg>

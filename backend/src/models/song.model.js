@@ -18,7 +18,7 @@ const songSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    mood: { type: String, required: true, trim: true },
+    mood: { type: String, required: true, trim: true, lowercase: true },
   },
   { timestamps: true }
 );
